@@ -14,13 +14,17 @@
 		<script type="text/javascript" src="js/controllerBfor.js" ></script>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/public.js" ></script>
+		<script type="text/javascript" src="js/jquery.form.js" ></script>
+		<script type="text/javascript" src="js/request.js" ></script>
 	</head>
 	<body ng-controller="index" class="index">
 		<!--<header><label id="userCenter">用户中心</label><label id="printList">我的文档</label></header>-->
 		<img class="banner" src="img/banner/banner2.jpg"/>
 		<ul>
 			<li id="upFile">
-				<input class="file" type="file" />
+				<form id="uploadForm" enctype="multipart/form-data" method="post">
+					<input class="file" name="file" type="file" id="uploadFile" />
+				</form>
 				<img src="img/fileUp.png" alt="" />
 				<span>上传文档</span><br />
 				<small class="colorBlue">支持word、pdf、excel等格式</small>
@@ -33,4 +37,11 @@
 		</ul>
 		<button id="scanCode"><img src="img/scan.png" alt="" />扫码打印</button>
 	</body>
+<script>
+  $('#uploadFile').change(function () {
+    if ($(this).val()) {
+      fileRequest.uploadDoc($('#uploadForm'));
+    }
+  });
+</script>
 </html>

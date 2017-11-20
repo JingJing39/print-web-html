@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="js/controllerBfor.js" ></script>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/public.js" ></script>
+		<script type="text/javascript" src="js/request.js" ></script>
 	</head>
 	<body ng-controller="setting" class="setting">
 		<img src="img/icon/picture.png" />
@@ -22,7 +23,12 @@
 			 	<li class="fixed" id="changePas">修改密码</li>
 			 	<li class="fixed" id="changeMobile">修改绑定手机号</li>
 			 </ul>
-			 <button class="normalBtn">退出登录</button>
+			 <button id="quit" class="normalBtn">退出登录</button>
 		</section>
 	</body>
+<script>
+  $('#quit').click(function () {
+    userRequest.quit();
+  });
+</script>
 </html>
