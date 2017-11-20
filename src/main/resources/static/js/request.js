@@ -193,6 +193,47 @@ var fileRequest = {
         console.info(data);
       }
     });
+  },
+  get: function (callBack) {
+    $.ajax({
+      type: 'GET',
+      xhrFields: {
+        withCredentials: true,
+        useDefaultXhrHeader: false
+      },
+      url: contextPath + 'file/get',
+      data: {},
+      dataType: 'json',
+      success: function (data) {
+        if (data.success) {
+          callBack(data.data);
+        } else {
+          alert(data.message);
+        }
+      }
+    });
+  },
+  delete: function (id, callBack) {
+    $.ajax({
+      type: 'GET',
+      xhrFields: {
+        withCredentials: true,
+        useDefaultXhrHeader: false
+      },
+      url: contextPath + 'file/delete',
+      data: {
+        id: id
+      },
+      dataType: 'json',
+      success: function (data) {
+        if (data.success) {
+          callBack();
+          alert('删除成功')
+        } else {
+          alert(data.message);
+        }
+      }
+    });
   }
 };
 

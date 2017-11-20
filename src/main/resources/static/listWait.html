@@ -14,29 +14,39 @@
 		<script type="text/javascript" src="js/controllerBfor.js" ></script>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/public.js" ></script>
+		<script type="text/javascript" src="js/request.js" ></script>
 	</head>
 	<body ng-controller="listWait" class="list listWait">
-		<ul>
-			<li class="fixed">
-				<p>文件标题</p>
-				<button class="btn_con colorBlue">打印</button>
-				<button class="btn_con">删除</button>
-			</li>
-			<li class="fixed">
-				<p>文学思想与艺术</p>
-				<button class="btn_con colorBlue">打印</button>
-				<button class="delete"><img src="img/icon/delete.png" alt="" /></button>
-			</li>
-			<li class="fixed">
-				<p>中国特色主义现代化</p>
-				<button class="btn_con colorBlue">打印</button>
-				<button class="delete"><img src="img/icon/delete.png" alt="" /></button>
-			</li>
-			<li class="fixed">
-				<p>邓小平三个理论</p>
-				<button class="btn_con colorBlue">打印</button>
-				<button class="delete"><img src="img/icon/delete.png" alt="" /></button>
-			</li>
-		</ul>
+		<ul id="data"></ul>
 	</body>
+<script>
+
+  var get = function () {
+    fileRequest.get(callBack);
+  };
+
+  var toDetail = function (id) {
+    fileRequest.toDetail(id);
+  };
+
+  var deleteFile = function (id) {
+    fileRequest.delete(id, get);
+  };
+  var callBack = function (data) {
+    var html = '';
+    if (data) {
+      for (var i = 0; i < data.length; i++) {
+        var print = data[i];
+        html += '<li class="fixed">'
+          + '<p>' + print.name + '</p>'
+          + '<button class="btn_con colorBlue" onclick="toDetail(' + print.id + ')">打印</button>'
+          + '<button class="delete" onclick="deleteFile(' + print.id + ')"><img src="img/icon/delete.png" alt="" /></button>'
+          + '</li>';
+      }
+    }
+    $('#data').html(html);
+  };
+
+  get();
+</script>
 </html>
