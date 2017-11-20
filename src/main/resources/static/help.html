@@ -7,30 +7,24 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no, email=no" />
 		<meta name="apple-touch-fullscreen" content="yes" />
-		<title>首页</title>
+		<title>帮助中心</title>
 		<link rel="stylesheet" href="css/base-wechat.css" />
 		<link rel="stylesheet" href="css/style1.0.css" />
 		<script type="text/javascript" src="https://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" ></script>
-		<script type="text/javascript" src="js/controllerBfor.js" ></script>
+		<script type="text/javascript" src="js/controllerPay.js" ></script>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/public.js" ></script>
 	</head>
-	<body ng-controller="index" class="index">
-		<!--<header><label id="userCenter">用户中心</label><label id="printList">我的文档</label></header>-->
-		<img class="banner" src="img/banner/banner2.jpg"/>
+	<body ng-controller="help" class="help">
 		<ul>
-			<li id="upFile">
-				<input class="file" type="file" />
-				<img src="img/fileUp.png" alt="" />
-				<span>上传文档</span><br />
-				<small class="colorBlue">支持word、pdf、excel等格式</small>
-			</li>
-			<li id="recharge">
-				<img src="img/recharge.png" alt="" />
-				<span>充值</span><br />
-				<small class="colorBlue">充值送好礼，优惠多多</small>
-			</li>
-		</ul>
-		<button id="scanCode"><img src="img/scan.png" alt="" />扫码打印</button>
+		 	<li class="fixed" id='upFile'>
+		 		<h6 class="colorOrg">怎么上传文件?</h6>
+		 		<p>安卓手机打开直接打开本地文档上传即可，ios手机可先使用电脑将文件上传至云端，再进行打印。</p>
+		 	</li>
+		 	<li class="fixed" id="print">
+		 		<h6 class="colorOrg">怎么打印文件?</h6>
+		 		<p>先用手机进行扫码，确认需要打印的文件以及格式设置，付款后进行打印即可。</p>
+		 	</li>
+		 </ul>
 	</body>
 </html>

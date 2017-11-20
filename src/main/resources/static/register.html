@@ -7,7 +7,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no, email=no" />
 		<meta name="apple-touch-fullscreen" content="yes" />
-		<title>首页</title>
+		<title>注册</title>
 		<link rel="stylesheet" href="css/base-wechat.css" />
 		<link rel="stylesheet" href="css/style1.0.css" />
 		<script type="text/javascript" src="https://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" ></script>
@@ -15,22 +15,19 @@
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/public.js" ></script>
 	</head>
-	<body ng-controller="index" class="index">
-		<!--<header><label id="userCenter">用户中心</label><label id="printList">我的文档</label></header>-->
-		<img class="banner" src="img/banner/banner2.jpg"/>
-		<ul>
-			<li id="upFile">
-				<input class="file" type="file" />
-				<img src="img/fileUp.png" alt="" />
-				<span>上传文档</span><br />
-				<small class="colorBlue">支持word、pdf、excel等格式</small>
-			</li>
-			<li id="recharge">
-				<img src="img/recharge.png" alt="" />
-				<span>充值</span><br />
-				<small class="colorBlue">充值送好礼，优惠多多</small>
-			</li>
-		</ul>
-		<button id="scanCode"><img src="img/scan.png" alt="" />扫码打印</button>
+	<body ng-controller="home" class="register">
+		<button class="normalBtn" id="register">注册</button>
+		<button class="normalBtn" id="login">登录</button>
+		<button class="normalBtn" id="forget">忘记密码</button>
+		<button class="normalBtn" id="index">主页</button>
+		<button class="normalBtn" id="listOver">已打印文件</button>
+		<button class="normalBtn" id="listWait">待打印文件</button>
+		<button class="normalBtn" id="printDetail">打印设置</button>
+		<button class="normalBtn" id="billDetail">消费明细</button>
+		<button class="normalBtn" id="recharge">充值</button>
+		<button class="normalBtn" id="pay">支付</button>
+		<button class="normalBtn" id="userCenter">用户中心</button>
+		<button class="normalBtn" id="help">帮助中心</button>
+		<button class="normalBtn" id="setting">设置</button>
 	</body>
 </html>

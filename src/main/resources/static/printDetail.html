@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>打印设置</title>
+		<link rel="stylesheet" href="css/base-wechat.css" />
+		<link rel="stylesheet" href="css/style1.0.css" />
+		<script type="text/javascript" src="https://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" ></script>
+		<script type="text/javascript" src="js/controllerPrint.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+	</head>
+	<body ng-controller="printDetail" class="printDetail">
+		<header class="name"></header>
+		<ul>
+			<li class="fixed fixBig1">
+				<h6 id="name" class="colorOrg">海陆天（北方工业大学）</h6>
+			</li>
+			<li class="fixed"> 
+				<small>黑白：0.1元／页</small>
+			</li>
+		</ul>
+		<ul>
+			<li class="fixed">
+				<label>份数</label>
+				<div>
+					<span class="changeAmount plus">+</span>
+					<input class="printAmount" type="tel" value="1" />
+					<span class="changeAmount reduce">-</span>
+				</div>
+			</li>
+			<li class="fixed">
+				<label>单双面</label>
+				<span class="sigOrDoub" data-val='1'>单面</span>
+			</li>
+			<li class="fixed">
+				<label>颜色</label>
+				<span class="printColor">黑白</span>
+			</li>
+			<li class="fixed">
+				<label>纸型</label>
+				<span class="PringSize">A4</span>
+			</li>
+		</ul>
+		<ul>
+			<li class="fixed fixBig2">
+				<label>合计：</label>
+				<span class="printPrice colorBlue">¥3.00</span>
+			</li>
+		</ul>
+		<button class="normalBtn">确认打印</button>
+		<div class="alertBox" id="sigOrDoub">
+			<p class="sdType single selected" data-text="单面" data-val="1">
+				<img src="img/icon/paper-2.png"/>
+				单面打印
+			</p>
+			<p class="sdType double" data-text="双面" data-val="2">
+				<img src="img/icon/paper.png"/>
+				双面（长边翻转）打印
+			</p>
+			<button class="centi">确定</button>
+		</div>
+		<div class="alertBox" id="color">
+			<p class="sdType single selected" data-text="黑白" data-val="1">
+				<img src="img/icon/paper-5.png"/>
+				黑白打印
+			</p>
+			<p class="sdType double" data-text="彩色" data-val="2">
+				<img src="img/icon/paper-4.png"/>
+				彩色打印
+			</p>
+			<button class="centi">确定</button>
+		</div>
+		<div class="alertBox" id="pageType">
+			<p class="sdType single selected" data-text="A4" data-val="1">
+				<img src="img/icon/paper-6.png"/>
+				A4纸打印
+			</p>
+			<p class="sdType double" data-text="A3" data-val="2">
+				<img src="img/icon/paper-7.png"/>
+				A3纸打印
+			</p>
+			<button class="centi">确定</button>
+		</div>
+		<div class="block"></div>
+	</body>
+</html>

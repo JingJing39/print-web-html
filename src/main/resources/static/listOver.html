@@ -7,7 +7,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no, email=no" />
 		<meta name="apple-touch-fullscreen" content="yes" />
-		<title>首页</title>
+		<title>已打印文件</title>
 		<link rel="stylesheet" href="css/base-wechat.css" />
 		<link rel="stylesheet" href="css/style1.0.css" />
 		<script type="text/javascript" src="https://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" ></script>
@@ -15,22 +15,18 @@
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/public.js" ></script>
 	</head>
-	<body ng-controller="index" class="index">
-		<!--<header><label id="userCenter">用户中心</label><label id="printList">我的文档</label></header>-->
-		<img class="banner" src="img/banner/banner2.jpg"/>
+	<body ng-controller="listOver" class="list listOver">
 		<ul>
-			<li id="upFile">
-				<input class="file" type="file" />
-				<img src="img/fileUp.png" alt="" />
-				<span>上传文档</span><br />
-				<small class="colorBlue">支持word、pdf、excel等格式</small>
+			<li class="fixed">
+				<p class="fileTitle">马克思思想与中国特色社会主义</p>
 			</li>
-			<li id="recharge">
-				<img src="img/recharge.png" alt="" />
-				<span>充值</span><br />
-				<small class="colorBlue">充值送好礼，优惠多多</small>
+			<li class="fixed selected">
+				<p class="fileTitle">文件标题</p>
 			</li>
 		</ul>
-		<button id="scanCode"><img src="img/scan.png" alt="" />扫码打印</button>
+		<section class="btnBox">
+			<button class="normalBtn" id="printAgain">再次打印</button>
+			<button class="normalBtn" id="cancel">删除</button>			
+		</section>
 	</body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>我的钱包</title>
+		<link rel="stylesheet" href="css/base-wechat.css" />
+		<link rel="stylesheet" href="css/style1.0.css" />
+		<script type="text/javascript" src="https://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" ></script>
+		<script type="text/javascript" src="js/controllerBfor.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+	</head>
+	<body ng-controller="recharge" class="recharge">
+		<section class="header">
+			<h6>余额</h6>
+			<big id="restAmount">¥50.00</big>
+			<a href="billDetail.html">消费明细></a>
+		</section>
+		<section class="pay">
+			<h6>充值</h6>
+			<ul>
+				<li class="fixed selected" data-val = "10">
+					<p class="charge">充10元</p>
+					<label class="fee colorOrg">免费送1元</label>
+				</li>
+				<li class="fixed" data-val = "50">
+					<p class="charge">充50元</p>
+					<label class="fee colorOrg">免费送6元</label>
+				</li>
+				<li class="fixed" data-val = "100">
+					<p class="charge">充100元</p>
+					<label class="fee colorOrg">免费送15元</label>
+				</li>
+				<li class="fixed" data-val = "150">
+					<p class="charge">充150元</p>
+					<label class="fee colorOrg">免费送20元</label>
+				</li>
+			</ul>
+			<ul>
+				<li class="type selected" data-val = "weixin">
+					<span id="weixin">微信支付</span>
+					<b></b>
+				</li>
+				<li class="type" data-val = "zhifubao">
+					<span id="zhifubao">支付宝支付</span>
+					<b></b>
+				</li>
+			</ul>
+			<button class="normalBtn">立即充值</button>
+		</section>
+	</body>
+</html>
