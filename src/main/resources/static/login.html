@@ -14,7 +14,6 @@
 		<script type="text/javascript" src="js/controllerBfor.js" ></script>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
 		<script type="text/javascript" src="js/public.js" ></script>
-		<script type="text/javascript" src="js/request.js" ></script>
 	</head>
 	<body ng-controller="login" class="login">
 		<img class="myPhoto" src="img/icon/picture.png"/>
@@ -35,7 +34,7 @@
 		        </label>
 				<span>我已阅读，并同意</span><a class="colorBlue" href="financing.html?flagShow=1">《融资文件》</a>
 			</div>-->
-			<button class="normalBtn" id="toLogin">登录</button>
+			<button class="normalBtn">登录</button>
 			<p>
 				<a class="toforget" href="forget.html">忘记密码</a>
 				<a class="toregister colorOrg" href="home.html">注册</a>
@@ -43,23 +42,4 @@
 			
 		</section>
 	</body>
-<script>
-  var param = {
-    getPhone: function () {
-      return $('#mobile').val();
-    },
-    getPassword: function () {
-      return $('#password').val();
-    }
-  };
-  $('#toLogin').click(function () {
-    var phone = param.getPhone();
-    var password = param.getPassword();
-    if (phone && password) {
-      userRequest.login(phone, password);
-    } else {
-      alert('请输入必填项');
-    }
-  });
-</script>
 </html>
