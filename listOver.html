@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<title>已打印文件</title>
+		<link rel="stylesheet" href="css/base-wechat.css" />
+		<link rel="stylesheet" href="css/style1.0.css" />
+		<script type="text/javascript" src="https://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" ></script>
+		<script type="text/javascript" src="js/controllerBfor.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+	</head>
+	<body ng-controller="listOver" class="list listOver">
+		<ul>
+			<li class="fixed">
+				<p class="fileTitle">马克思思想与中国特色社会主义</p>
+			</li>
+			<li class="fixed selected">
+				<p class="fileTitle">文件标题</p>
+			</li>
+		</ul>
+		<section class="btnBox">
+			<button class="normalBtn" id="printAgain">再次打印</button>
+			<button class="normalBtn" id="cancel">删除</button>			
+		</section>
+	</body>
+</html>

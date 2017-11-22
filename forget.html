@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>设置新密码</title>
+		<link rel="stylesheet" href="css/base-wechat.css" />
+		<link rel="stylesheet" href="css/style1.0.css" />
+		<script type="text/javascript" src="https://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" ></script>
+		<script type="text/javascript" src="js/controllerBfor.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+	</head>
+	<body ng-controller="forget" class="forget login">
+		<img class="myPhoto" src="img/icon/picture.png"/>
+		<section class="info">
+			<ul>
+				<li class="fixed">
+					<img src="img/icon/account-3.png"/>
+					<input class="normalInput" type="tel" id="mobile" placeholder="请输入您的手机号" />
+				</li>
+				<li class="fixed">
+					<img src="img/icon/key-2.png"/>
+					<input class="normalInput" type="password" id="password" placeholder="请输入您的密码" />
+				</li>
+				<li class="fixed">
+					<img src="img/icon/code.png"/>
+					<input class="normalInput" type="text" id="password" placeholder="请输入您的手机验证码" />
+					<button class="getCode colorBlue">获取验证码</button>
+				</li>
+			</ul>
+			<button class="normalBtn">修改密码</button>
+			
+	</body>
+</html>
